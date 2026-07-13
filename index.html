@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flor Zapata Pastelería — Posadas, Misiones</title>
+  <meta name="description"
+    content="Pastelería artesanal en Posadas, Misiones. Tortas, tartas y postres a pedido por WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --crema: #FBF3E7;
+      --crema-oscura: #EFE2C9;
+      --canela: #C1723D;
+      --canela-oscura: #A85A2B;
+      --miel: #E3A857;
+      --cafe: #4A2E1F;
+      --cafe-suave: #6E4E3A;
+      --rosa-logo: #E8A7B7;
+      --blanco: #FFFDF9;
+      --sombra: 0 8px 24px rgba(74, 46, 31, 0.12);
+      --radio: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--crema);
+      color: var(--cafe);
+      font-family: 'Work Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.035;
+      z-index: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Fraunces', serif;
+      color: var(--cafe);
+      margin: 0 0 .4em;
+      line-height: 1.1;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 1em;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contenedor {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .eyebrow {
+      font-family: 'Work Sans', sans-serif;
+      font-size: .78rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--canela-oscura);
+      font-weight: 600;
+      margin-bottom: .6em;
+      display: inline-block;
+    }
+
+    /* --- Divisor firma: hilo de batidora / drizzle --- */
+    .divisor {
+      width: 100%;
+      height: 36px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .divisor path {
+      fill: none;
+      stroke: var(--canela);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      opacity: .55;
+    }
+
+    /* --- WhatsApp flotante --- */
+    .wsp-flotante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 50;
+      background: #3D8C5C;
+      color: #fff;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+      text-decoration: none;
+      transition: transform .2s ease;
+    }
+
+    .wsp-flotante:hover {
+      transform: scale(1.08);
+    }
+
+    .wsp-flotante svg {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* --- Header / Hero --- */
+    header.hero {
+      padding: 52px 0 40px;
+      text-align: center;
+    }
+
+    .logo-badge {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--blanco);
+      box-shadow: var(--sombra);
+      border: 3px solid var(--crema-oscura);
+    }
+
+    .logo-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 6vw, 3.2rem);
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .hero .tagline {
+      font-size: 1.05rem;
+      color: var(--cafe-suave);
+      max-width: 480px;
+      margin: 0 auto 26px;
+    }
+
+    .hero-datos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px 14px;
+      margin-bottom: 28px;
+      font-size: .9rem;
+      color: var(--cafe-suave);
+    }
+
+    .hero-datos span {
+      background: var(--blanco);
+      border: 1px solid var(--crema-oscura);
+      padding: 7px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--canela);
+      color: var(--blanco);
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 15px 30px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: var(--sombra);
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .btn:hover {
+      background: var(--canela-oscura);
+      transform: translateY(-2px);
+    }
+
+    .btn svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+
+    .btn-chico {
+      padding: 10px 18px;
+      font-size: .85rem;
+      gap: 7px;
+    }
+
+    .btn-chico svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* --- Secciones generales --- */
+    .seccion {
+      padding: 56px 0;
+    }
+
+    .seccion h2 {
+      font-size: clamp(1.7rem, 4.5vw, 2.3rem);
+      text-align: center;
+      margin-bottom: .25em;
+    }
+
+    .seccion-intro {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 40px;
+      color: var(--cafe-suave);
+    }
+
+    /* --- Avisos: stock de fin de semana / tortas especiales --- */
+    .avisos-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .aviso-card {
+      background: var(--blanco);
+      border-radius: var(--radio);
+      padding: 26px 24px;
+      box-shadow: var(--sombra);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      border-top: 4px solid var(--miel);
+    }
+
+    .aviso-especiales {
+      border-top-color: var(--rosa-logo);
+    }
+
+    .aviso-icono {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--crema-oscura);
+      color: var(--canela-oscura);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .aviso-icono svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .aviso-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: .4em;
+    }
+
+    .aviso-card p {
+      color: var(--cafe-suave);
+      font-size: .93rem;
+      margin-bottom: .6em;
+    }
+
+    .lista-stock {
+      list-style: none;
+      margin: 0 0 .7em;
+      padding: 0;
+    }
+
+    .lista-stock li {
+      color: var(--cafe);
+      font-weight: 600;
+      font-size: .95rem;
+      padding: 6px 0 6px 26px;
+      position: relative;
+    }
+
+    .lista-stock li::before {
+      content: "🍰";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      font-size: .9rem;
+    }
+
+    .aviso-nota {
+      font-size: .82rem !important;
+      font-style: italic;
+      color: var(--canela-oscura) !important;
+    }
+
+    /* --- Catálogo --- */
+    .filtros {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+
+    .filtro-btn {
+      font-family: 'Work Sans', sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      background: var(--blanco);
+      color: var(--cafe-suave);
+      border: 1px solid var(--crema-oscura);
+      padding: 9px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all .18s ease;
+    }
+
+    .filtro-btn:hover {
+      border-color: var(--canela);
+    }
+
+    .filtro-btn.activo {
+      background: var(--canela);
+      color: var(--blanco);
+      border-color: var(--canela);
+    }
+
+    .grilla-productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 26px;
+    }
+
+    .producto {
+      background: var(--blanco);
+      border-radius: var(--radio);
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: aparecer .6s ease forwards;
+    }
+
+    @keyframes aparecer {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    .producto-img {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--crema-oscura), #F6E7CC);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .producto-img img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .placeholder-icono {
+      color: var(--canela-oscura);
+      opacity: .55;
+      text-align: center;
+      font-size: .72rem;
+      font-family: 'Work Sans', sans-serif;
+      letter-spacing: .03em;
+      padding: 0 16px;
+    }
+
+    .placeholder-icono svg {
+      width: 34px;
+      height: 34px;
+      margin-bottom: 6px;
+    }
+
+    .producto.sin-stock .producto-img {
+      filter: grayscale(65%);
+    }
+
+    .etiqueta {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(74, 46, 31, 0.85);
+      color: var(--blanco);
+      font-size: .68rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 999px;
+      z-index: 2;
+    }
+
+    .etiqueta.finde {
+      background: var(--miel);
+      color: var(--cafe);
+    }
+
+    .etiqueta.agotado {
+      background: #8a7263;
+    }
+
+    .producto-info {
+      padding: 20px 20px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .producto-info h3 {
+      font-size: 1.2rem;
+      margin-bottom: .35em;
+    }
+
+    .producto-info .medidas {
+      font-size: .82rem;
+      color: var(--canela-oscura);
+      font-weight: 600;
+      margin-bottom: .5em;
+    }
+
+    .producto-info p.desc {
+      color: var(--cafe-suave);
+      font-size: .92rem;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+
+    .producto-info .btn-chico {
+      align-self: flex-start;
+    }
+
+    .producto.sin-stock .btn-chico {
+      background: #B7A697;
+      pointer-events: none;
+    }
+
+    /* --- Cómo pedir --- */
+    .pasos {
+      background: var(--crema-oscura);
+    }
+
+    .pasos-lista {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      counter-reset: paso;
+    }
+
+    .paso {
+      background: var(--blanco);
+      border-radius: var(--radio);
+      padding: 26px 22px;
+      box-shadow: var(--sombra);
+      position: relative;
+    }
+
+    .paso::before {
+      counter-increment: paso;
+      content: counter(paso);
+      font-family: 'Fraunces', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--blanco);
+      background: var(--canela);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .paso h3 {
+      font-size: 1.05rem;
+      margin-bottom: .3em;
+    }
+
+    .paso p {
+      color: var(--cafe-suave);
+      font-size: .92rem;
+      margin: 0;
+    }
+
+    .aviso-tiempo {
+      text-align: center;
+      margin-top: 34px;
+      font-size: .92rem;
+      color: var(--cafe-suave);
+    }
+
+    .aviso-tiempo strong {
+      color: var(--canela-oscura);
+    }
+
+    /* --- Ubicación --- */
+    .ubicacion {
+      background: var(--blanco);
+    }
+
+    .ubicacion-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .ubicacion-card {
+      background: var(--crema);
+      border-radius: var(--radio);
+      padding: 24px 26px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .ubicacion-card svg {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      color: var(--canela);
+    }
+
+    .ubicacion-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: .3em;
+    }
+
+    .ubicacion-card p {
+      color: var(--cafe-suave);
+      font-size: .92rem;
+      margin: 0;
+    }
+
+    /* --- CTA final --- */
+    .cta-final {
+      text-align: center;
+      padding: 60px 0 70px;
+    }
+
+    .cta-final h2 {
+      margin-bottom: .3em;
+    }
+
+    .cta-final p {
+      color: var(--cafe-suave);
+      max-width: 480px;
+      margin: 0 auto 28px;
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: var(--cafe);
+      color: #EADFCF;
+      padding: 38px 0 26px;
+      text-align: center;
+      font-size: .88rem;
+    }
+
+    footer .footer-logo {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1.3rem;
+      color: var(--blanco);
+      margin-bottom: 10px;
+    }
+
+    footer .redes {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin: 16px 0 20px;
+    }
+
+    footer .redes a {
+      color: #EADFCF;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      transition: color .18s ease;
+    }
+
+    footer .redes a:hover {
+      color: var(--rosa-logo);
+    }
+
+    footer .redes svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    footer .copy {
+      color: #B7A691;
+      margin-top: 10px;
+      font-size: .78rem;
+    }
+
+    @media (min-width:680px) {
+      .avisos-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* --- Revelado suave al hacer scroll (liviano, apto para mobile) --- */
+    [data-animar] {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .55s ease, transform .55s ease;
+      will-change: opacity, transform;
+    }
+
+    [data-animar].en-vista {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .producto {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+
+      .btn:hover,
+      .wsp-flotante:hover {
+        transform: none;
+      }
+
+      [data-animar] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--canela-oscura);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ WHATSAPP FLOTANTE ============ -->
+  <a class="wsp-flotante" id="wsp-flotante" href="#" target="_blank" rel="noopener"
+    aria-label="Escribinos por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.47 14.38c-.29-.15-1.71-.85-1.98-.94-.27-.1-.46-.15-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.44-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.58-.9-2.16-.24-.58-.48-.5-.65-.51h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.42 0 1.42 1.04 2.8 1.19 2.99.15.19 2.05 3.13 4.97 4.39.69.3 1.24.48 1.66.61.7.22 1.34.19 1.84.11.56-.08 1.71-.7 1.95-1.37.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z" />
+      <path
+        d="M12.02 2C6.5 2 2.03 6.44 2.03 11.94c0 1.85.5 3.62 1.44 5.19L2 22l5.02-1.42a10.03 10.03 0 0 0 5 1.34h.01c5.52 0 9.99-4.44 9.99-9.94C22 6.44 17.53 2 12.02 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.88.83-3.02-.2-.31a8.13 8.13 0 0 1-1.25-4.4c0-4.49 3.67-8.15 8.24-8.15 2.2 0 4.27.86 5.83 2.41a8.1 8.1 0 0 1 2.41 5.75c0 4.49-3.67 8.17-8.25 8.17z" />
+    </svg>
+  </a>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="contenedor">
+      <div class="logo-badge">
+        <img src="logo-flor-zapata.png" alt="Logo Flor Zapata Pastelería"
+          onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-family:Fraunces,serif;font-style:italic;color:%234A2E1F;font-size:1.1rem;\'>FZ</div>'">
+      </div>
+      <span class="eyebrow">Pastelería artesanal · Posadas, Misiones</span>
+      <h1>Flor Zapata</h1>
+      <p class="tagline">Tortas, tartas y postres hechos a mano, con ingredientes reales y ese cariño que solo se nota
+        en la primera cucharada.</p>
+      <div class="hero-datos">
+        <span>📲 Pedidos por WhatsApp, las 24 hs</span>
+        <span>⏱ Con 24 hs de anticipación</span>
+        <span>🚚 Envíos y retiro en Posadas</span>
+      </div>
+      <a href="#" class="btn wsp-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.47 14.38c-.29-.15-1.71-.85-1.98-.94-.27-.1-.46-.15-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.44-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.58-.9-2.16-.24-.58-.48-.5-.65-.51h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.42 0 1.42 1.04 2.8 1.19 2.99.15.19 2.05 3.13 4.97 4.39.69.3 1.24.48 1.66.61.7.22 1.34.19 1.84.11.56-.08 1.71-.7 1.95-1.37.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z" />
+          <path
+            d="M12.02 2C6.5 2 2.03 6.44 2.03 11.94c0 1.85.5 3.62 1.44 5.19L2 22l5.02-1.42a10.03 10.03 0 0 0 5 1.34h.01c5.52 0 9.99-4.44 9.99-9.94C22 6.44 17.53 2 12.02 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.88.83-3.02-.2-.31a8.13 8.13 0 0 1-1.25-4.4c0-4.49 3.67-8.15 8.24-8.15 2.2 0 4.27.86 5.83 2.41a8.1 8.1 0 0 1 2.41 5.75c0 4.49-3.67 8.17-8.25 8.17z" />
+        </svg>
+        Hacé tu pedido
+      </a>
+    </div>
+  </header>
+
+  <svg class="divisor" viewBox="0 0 300 30" preserveAspectRatio="none">
+    <path d="M0 15 Q 15 2, 30 15 T 60 15 T 90 15 T 120 15 T 150 15 T 180 15 T 210 15 T 240 15 T 270 15 T 300 15" />
+  </svg>
+
+  <!-- ============ AVISOS: STOCK DE FIN DE SEMANA Y TORTAS ESPECIALES ============ -->
+  <section class="seccion avisos" data-animar>
+    <div class="contenedor avisos-grid">
+      <div class="aviso-card aviso-stock">
+        <div class="aviso-icono">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M8 2v3M16 2v3M3.5 9h17" />
+            <rect x="3.5" y="5" width="17" height="16" rx="3" />
+            <path d="M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01" />
+          </svg>
+        </div>
+        <div>
+          <span class="eyebrow">Stock de fin de semana</span>
+          <h3>Sábados y domingos, siempre tenemos</h3>
+          <ul class="lista-stock">
+            <li>Cheesecake de Frutos Rojos — tamaño grande y mediano</li>
+            <li>Tiramisú — tamaño mediano</li>
+          </ul>
+          <p class="aviso-nota">Ideal para no llegar tarde: estos productos están disponibles sin encargo previo,
+            mientras dure el stock.</p>
+        </div>
+      </div>
+      <div class="aviso-card aviso-especiales">
+        <div class="aviso-icono">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4L12 3z" />
+            <path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z" />
+          </svg>
+        </div>
+        <div>
+          <span class="eyebrow">¿Buscás algo distinto?</span>
+          <h3>También hacemos tortas especiales a pedido</h3>
+          <p>Si tenés una fecha especial o una idea puntual (temática, tamaño, relleno a medida), escribinos por
+            WhatsApp y lo charlamos juntas.</p>
+          <a href="#" class="btn btn-chico wsp-link" target="_blank" rel="noopener">Consultar torta especial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="divisor" viewBox="0 0 300 30" preserveAspectRatio="none">
+    <path d="M0 15 Q 15 28, 30 15 T 60 15 T 90 15 T 120 15 T 150 15 T 180 15 T 210 15 T 240 15 T 270 15 T 300 15" />
+  </svg>
+
+  <!-- ============ CATÁLOGO ============ -->
+  <section class="seccion" id="catalogo" data-animar>
+    <div class="contenedor">
+      <span class="eyebrow" style="display:block; text-align:center;">Catálogo</span>
+      <h2>Lo que estamos horneando</h2>
+      <p class="seccion-intro">Cada producto se prepara a pedido. Los precios y tamaños disponibles se confirman por
+        WhatsApp según lo que necesites.</p>
+
+      <div class="filtros" id="filtros"></div>
+      <div class="grilla-productos" id="grilla-productos"></div>
+    </div>
+  </section>
+
+  <svg class="divisor" viewBox="0 0 300 30" preserveAspectRatio="none">
+    <path d="M0 15 Q 15 2, 30 15 T 60 15 T 90 15 T 120 15 T 150 15 T 180 15 T 210 15 T 240 15 T 270 15 T 300 15" />
+  </svg>
+
+  <!-- ============ CÓMO PEDIR ============ -->
+  <section class="seccion pasos" data-animar>
+    <div class="contenedor">
+      <span class="eyebrow" style="display:block; text-align:center;">Cómo pedir</span>
+      <h2>De la idea a tu mesa, en 4 pasos</h2>
+      <div class="pasos-lista">
+        <div class="paso">
+          <h3>Elegí tu producto</h3>
+          <p>Recorré el catálogo y elegí la torta, tarta o postre que más te guste.</p>
+        </div>
+        <div class="paso">
+          <h3>Escribinos por WhatsApp</h3>
+          <p>Tocá "Consultar" en el producto o escribinos directamente, las 24 hs.</p>
+        </div>
+        <div class="paso">
+          <h3>Confirmamos tamaño y fecha</h3>
+          <p>Vemos juntas el tamaño, la porción y el día de entrega, con al menos 24 hs de anticipación.</p>
+        </div>
+        <div class="paso">
+          <h3>Coordinamos la entrega</h3>
+          <p>Elegís si lo retirás en nuestro punto en Posadas o si te lo enviamos.</p>
+        </div>
+      </div>
+      <p class="aviso-tiempo">Recordá: todos los pedidos necesitan <strong>mínimo 24 hs</strong> de anticipación.</p>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN ============ -->
+  <section class="seccion ubicacion" data-animar>
+    <div class="contenedor">
+      <span class="eyebrow" style="display:block; text-align:center;">Ubicación y envíos</span>
+      <h2>Te lo llevamos, o venís a buscarlo</h2>
+      <div class="ubicacion-grid">
+        <div class="ubicacion-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z" />
+            <circle cx="12" cy="9.5" r="2.5" />
+          </svg>
+          <div>
+            <h3>Retiro en Posadas</h3>
+            <p>Contamos con un punto de entrega en Posadas, Misiones. La dirección exacta se coordina por WhatsApp al
+              confirmar tu pedido.</p>
+          </div>
+        </div>
+        <div class="ubicacion-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 7h11v8H3z" />
+            <path d="M14 10h4l3 3v2h-7z" />
+            <circle cx="7" cy="18" r="1.6" />
+            <circle cx="17.5" cy="18" r="1.6" />
+          </svg>
+          <div>
+            <h3>Envíos</h3>
+            <p>También hacemos envíos, coordinando día, zona y costo directamente por WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <svg class="divisor" viewBox="0 0 300 30" preserveAspectRatio="none">
+    <path d="M0 15 Q 15 28, 30 15 T 60 15 T 90 15 T 120 15 T 150 15 T 180 15 T 210 15 T 240 15 T 270 15 T 300 15" />
+  </svg>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="cta-final" data-animar>
+    <div class="contenedor">
+      <h2>¿Ya sabés qué vas a pedir?</h2>
+      <p>Escribinos por WhatsApp y coordinamos tamaño, fecha y entrega. Estamos disponibles las 24 hs.</p>
+      <a href="#" class="btn wsp-link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M17.47 14.38c-.29-.15-1.71-.85-1.98-.94-.27-.1-.46-.15-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.44-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.58-.9-2.16-.24-.58-.48-.5-.65-.51h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.42 0 1.42 1.04 2.8 1.19 2.99.15.19 2.05 3.13 4.97 4.39.69.3 1.24.48 1.66.61.7.22 1.34.19 1.84.11.56-.08 1.71-.7 1.95-1.37.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z" />
+          <path
+            d="M12.02 2C6.5 2 2.03 6.44 2.03 11.94c0 1.85.5 3.62 1.44 5.19L2 22l5.02-1.42a10.03 10.03 0 0 0 5 1.34h.01c5.52 0 9.99-4.44 9.99-9.94C22 6.44 17.53 2 12.02 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.88.83-3.02-.2-.31a8.13 8.13 0 0 1-1.25-4.4c0-4.49 3.67-8.15 8.24-8.15 2.2 0 4.27.86 5.83 2.41a8.1 8.1 0 0 1 2.41 5.75c0 4.49-3.67 8.17-8.25 8.17z" />
+        </svg>
+        Escribir por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="contenedor">
+      <div class="footer-logo">Flor Zapata</div>
+      <p>Pastelería artesanal · Posadas, Misiones, Argentina</p>
+      <div class="redes">
+        <a href="https://instagram.com/florzapata.pasteleria" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.2" cy="6.8" r="1" />
+          </svg>
+          @florzapata.pasteleria
+        </a>
+        <a href="#" class="wsp-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.47 14.38c-.29-.15-1.71-.85-1.98-.94-.27-.1-.46-.15-.65.15-.19.29-.75.94-.92 1.13-.17.19-.34.22-.63.07-.29-.15-1.22-.45-2.32-1.44-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.65-1.58-.9-2.16-.24-.58-.48-.5-.65-.51h-.56c-.19 0-.51.07-.78.36-.27.29-1.02 1-1.02 2.42 0 1.42 1.04 2.8 1.19 2.99.15.19 2.05 3.13 4.97 4.39.69.3 1.24.48 1.66.61.7.22 1.34.19 1.84.11.56-.08 1.71-.7 1.95-1.37.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z" />
+            <path
+              d="M12.02 2C6.5 2 2.03 6.44 2.03 11.94c0 1.85.5 3.62 1.44 5.19L2 22l5.02-1.42a10.03 10.03 0 0 0 5 1.34h.01c5.52 0 9.99-4.44 9.99-9.94C22 6.44 17.53 2 12.02 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.11.88.83-3.02-.2-.31a8.13 8.13 0 0 1-1.25-4.4c0-4.49 3.67-8.15 8.24-8.15 2.2 0 4.27.86 5.83 2.41a8.1 8.1 0 0 1 2.41 5.75c0 4.49-3.67 8.17-8.25 8.17z" />
+          </svg>
+          WhatsApp
+        </a>
+      </div>
+      <p class="copy">© <span id="anio"></span> Flor Zapata Pastelería. Hecho con cariño en Misiones.</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ======================================================
+       CONFIGURACIÓN — editá acá el número y listo
+       ====================================================== */
+    const WHATSAPP_NUMERO = "5493764184951"; // +54 9 3764 18-4951
+
+    /* ======================================================
+       CATÁLOGO DE PRODUCTOS
+       Para agregar la foto real de un producto: guardá la
+       imagen en la carpeta img/productos/ con el mismo nombre
+       que el campo "imagen" de cada producto de esta lista.
+       Si la imagen no existe todavía, se muestra un placeholder
+       automáticamente — no rompe nada.
+       ====================================================== */
+    const productos = [
+      {
+        nombre: "Cheesecake de Frutos Rojos",
+        categoria: "Cheesecakes",
+        imagen: "cheesecake-frutos-rojos.jpg",
+        medidas: "Tamaño L (30 cm, ~12 porciones) · Tamaño M (24 cm, 8 a 10 porciones)",
+        descripcion: "Cheesecake clásica, con jalea casera de frutos rojos.",
+        finde: true
+      },
+      {
+        nombre: "Tarta de Frutillas",
+        categoria: "Tartas",
+        imagen: "tarta-de-frutillas.jpg",
+        medidas: "Tamaño L (30 cm, 8 a 10 porciones) · Tamaño M (24 cm, 6 a 8 porciones)",
+        descripcion: "Masa crocante, dulce de leche, crema chantilly casera, frutillas y una cobertura de gelatina de frutilla."
+      },
+      {
+        nombre: "Tarta Frutal",
+        categoria: "Tartas",
+        imagen: "tarta-frutal.jpg",
+        medidas: "Tamaño M (23 cm)",
+        descripcion: "Masa crocante, dulce de leche, crema chantilly casera y frutas de estación."
+      },
+      {
+        nombre: "Red Velvet",
+        categoria: "Tortas",
+        imagen: "red-velvet.jpg",
+        medidas: "A partir de 1,5 kg",
+        descripcion: "Clásica torta roja, de bizcochuelo con textura suave y sabor a vainilla y cacao, rellena y cubierta de cream cheese."
+      },
+      {
+        nombre: "Rogel",
+        categoria: "Clásicos",
+        imagen: "rogel.jpg",
+        medidas: "Desde 1,5 kg",
+        descripcion: "Finas y crujientes capas de masa, rellenas de dulce de leche, con cobertura de merengue italiano."
+      },
+      {
+        nombre: "Tarta de Manzanas",
+        categoria: "Tartas",
+        imagen: "tarta-de-manzanas.jpg",
+        medidas: "Tamaño L · Tamaño M",
+        descripcion: "Masa crocante, manzanas verdes cocidas, cubiertas por un crumble doradito. Canela a elección."
+      },
+      {
+        nombre: "Carrot Cake",
+        categoria: "Tortas",
+        imagen: "carrot-cake.jpg",
+        medidas: "A partir de 1,8 kg",
+        descripcion: "Torta de zanahorias y nueces, con un toque de canela, rellena y cubierta de cream cheese."
+      },
+      {
+        nombre: "Torta de Verano",
+        categoria: "Tortas",
+        imagen: "torta-de-verano.jpg",
+        medidas: "1,8 kg",
+        descripcion: "Bizcochuelo de vainilla humedecido con leche de coco, relleno de crema chantilly casera, frutillas, duraznos, arándanos y dulce de leche, cubierto de cream cheese."
+      },
+      {
+        nombre: "Chocotorta",
+        categoria: "Clásicos",
+        imagen: "chocotorta.jpg",
+        medidas: "Desde 1,5 kg",
+        descripcion: "Crema de dulce de leche y queso crema, con chocolinas remojadas en leche."
+      },
+      {
+        nombre: "Tiramisú",
+        categoria: "Cheesecakes",
+        imagen: "tiramisu.jpg",
+        medidas: "Tamaño L (22 cm, 12 a 14 porciones) · Tamaño M (15 cm, 8 a 10 porciones)",
+        descripcion: "Crema de queso con vainillas embebidas en almíbar de café, cubierta con cacao amargo.",
+        finde: true
+      },
+      {
+        nombre: "Pavlova",
+        categoria: "Clásicos",
+        imagen: "pavlova.jpg",
+        medidas: "Tamaño L (30 cm, 8 a 10 porciones)",
+        descripcion: "Clásica pavlova de merengue francés, crocante por fuera y cremosa por dentro, con crema chantilly casera, dulce de leche y frutas."
+      },
+      {
+        nombre: "Lemon Pie",
+        categoria: "Tartas",
+        imagen: "lemon-pie.jpg",
+        medidas: "Tamaño L (30 cm, 8 a 10 porciones) · Tamaño M (24 cm, 6 a 8 porciones)",
+        descripcion: "Masa crocante, curd de limón y merengue italiano."
+      },
+      {
+        nombre: "Cheesecake de Maracuyá",
+        categoria: "Cheesecakes",
+        imagen: "cheesecake-de-maracuya.jpg",
+        medidas: "Tamaño M",
+        descripcion: "Cheesecake clásica con cobertura de maracuyá.",
+        sinStock: true
+      }
+    ];
+
+    const categorias = ["Todos", ...new Set(productos.map(p => p.categoria))];
+
+    const iconoTorta = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6z"/><path d="M3 12c0-2.5 2-3.5 3-3.5s2 1 3 1 2-1 3-1 2 1 3 1 2-1 3-1 3 1 3 3.5"/><path d="M12 8.5V5"/><circle cx="12" cy="3.5" r="1"/></svg>`;
+
+    function slugParaMensaje(nombre) {
+      return nombre;
+    }
+
+    function crearTarjeta(p) {
+      const sinStock = p.sinStock;
+      const mensaje = encodeURIComponent(`¡Hola Flor! Quería consultar por: ${p.nombre}`);
+      const linkWsp = `https://wa.me/${WHATSAPP_NUMERO}?text=${mensaje}`;
+      return `
+    <article class="producto ${sinStock ? 'sin-stock' : ''}" data-categoria="${p.categoria}">
+      <div class="producto-img">
+        ${p.finde ? '<span class="etiqueta finde">Fin de semana</span>' : ''}
+        ${sinStock ? '<span class="etiqueta agotado">Sin stock</span>' : ''}
+        <div class="placeholder-icono">${iconoTorta}<div>${p.nombre}</div></div>
+        <img src="img/productos/${p.imagen}" alt="${p.nombre}" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="producto-info">
+        <h3>${p.nombre}</h3>
+        <div class="medidas">${p.medidas}</div>
+        <p class="desc">${p.descripcion}</p>
+        ${sinStock
+          ? `<span class="btn btn-chico">No disponible</span>`
+          : `<a class="btn btn-chico" href="${linkWsp}" target="_blank" rel="noopener">Consultar por WhatsApp</a>`
+        }
+      </div>
+    </article>
+  `;
+    }
+
+    function render(filtro) {
+      const grilla = document.getElementById('grilla-productos');
+      const lista = filtro === 'Todos' ? productos : productos.filter(p => p.categoria === filtro);
+      grilla.innerHTML = lista.map(crearTarjeta).join('');
+    }
+
+    function renderFiltros() {
+      const cont = document.getElementById('filtros');
+      cont.innerHTML = categorias.map((c, i) =>
+        `<button class="filtro-btn ${i === 0 ? 'activo' : ''}" data-cat="${c}">${c}</button>`
+      ).join('');
+      cont.querySelectorAll('.filtro-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          cont.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('activo'));
+          btn.classList.add('activo');
+          render(btn.dataset.cat);
+        });
+      });
+    }
+
+    renderFiltros();
+    render('Todos');
+
+    // Actualiza todos los links de WhatsApp genéricos (hero, cta final, footer)
+    document.querySelectorAll('.wsp-link, #wsp-flotante').forEach(a => {
+      a.href = `https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent('¡Hola Flor! Quería hacer un pedido.')}`;
+    });
+
+    document.getElementById('anio').textContent = new Date().getFullYear();
+
+    // Revelado suave al hacer scroll — liviano, sin librerías, respeta reduced-motion
+    const prefiereMenosMovimiento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefiereMenosMovimiento && 'IntersectionObserver' in window) {
+      const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+          if (entrada.isIntersecting) {
+            entrada.target.classList.add('en-vista');
+            observador.unobserve(entrada.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+      document.querySelectorAll('[data-animar]').forEach(el => observador.observe(el));
+    } else {
+      document.querySelectorAll('[data-animar]').forEach(el => el.classList.add('en-vista'));
+    }
+  </script>
+
+</body>
+
+</html>
